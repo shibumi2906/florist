@@ -1,0 +1,35 @@
+<!-- templates/flowershop/home.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flower Shop - Главная</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/logo.png' %}" alt="Логотип" id="logo">
+        <h1>Добро пожаловать в наш магазин цветов!</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'catalog:index' %}">Каталог</a></li>
+                <li><a href="{% url 'orders:index' %}">Мои заказы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Наши лучшие цветы</h2>
+        <img src="{% static 'images/лого цв.шоп.jpg' %}" alt="цветы в каждый дом">
+        <p>Ознакомьтесь с нашим каталогом и выберите самые красивые цветы для ваших близких!</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Flower Shop. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
