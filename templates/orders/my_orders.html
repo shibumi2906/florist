@@ -1,0 +1,24 @@
+<!-- templates/orders/my_orders.html -->
+<!-- templates/orders/my_orders.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мои заказы</title>
+</head>
+<body>
+    <h1>Мои заказы</h1>
+    {% include 'menu.html' %}
+    <div>
+        {% for item in items %}
+            <div>
+                <h2>{{ item.name }}</h2>
+                <p>{{ item.description }}</p>
+                <p>Цена: {{ item.price }} руб.</p>
+                <img src="{{ item.image.url }}" alt="{{ item.name }}">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+
